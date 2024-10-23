@@ -1,5 +1,6 @@
 package ie.atu.week6cicd;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,7 @@ public class ProductController {
     }
 
     @PostMapping("/newProduct")
-    public List<Product> newProduct(@RequestBody Product product)
+    public List<Product> newProduct(@Valid @RequestBody Product product)
 
     {
         //business logic to add this to a database
